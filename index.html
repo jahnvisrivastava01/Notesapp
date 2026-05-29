@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>📝 Personal Notes App</h1>
+        <p class="subtitle">Capture your thoughts anytime, anywhere.</p>
+
+        <form id="noteForm">
+
+            <textarea
+                id="noteInput"
+                placeholder="Write your thoughts here..."
+                required
+            ></textarea>
+
+            <div class="btn-group">
+                <button type="submit" class="save-btn">
+                    Save Note
+                </button>
+
+                <button type="reset" class="clear-btn">
+                    Clear
+                </button>
+            </div>
+
+        </form>
+
+        <h2>Your Notes</h2>
+
+        <div id="notesContainer" class="notes-list">
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

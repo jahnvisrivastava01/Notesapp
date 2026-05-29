@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:800px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+    color:#333;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+textarea{
+    width:100%;
+    height:150px;
+    padding:15px;
+    resize:none;
+    border:2px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+textarea:focus{
+    border-color:#667eea;
+}
+
+.btn-group{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+button{
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.save-btn{
+    background:#667eea;
+    color:white;
+}
+
+.save-btn:hover{
+    background:#4f63d6;
+}
+
+.clear-btn{
+    background:#f1f1f1;
+}
+
+.clear-btn:hover{
+    background:#ddd;
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#333;
+}
+
+.notes-list{
+    display:grid;
+    gap:15px;
+}
+
+.note-card{
+    background:#f8f9ff;
+    border-left:5px solid #667eea;
+    padding:15px;
+    border-radius:12px;
+    animation:fadeIn 0.4s ease;
+}
+
+.note-card p{
+    margin-bottom:10px;
+    color:#333;
+    line-height:1.6;
+}
+
+.note-date{
+    font-size:13px;
+    color:gray;
+    margin-bottom:10px;
+}
+
+.delete-btn{
+    background:#ff4d4d;
+    color:white;
+}
+
+.delete-btn:hover{
+    background:#e60000;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:600px){
+
+    .btn-group{
+        flex-direction:column;
+    }
+
+    button{
+        width:100%;
+    }
+}
