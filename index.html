@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,9 @@
     <div class="container">
 
         <h1>📝 Personal Notes App</h1>
-        <p class="subtitle">Capture your thoughts anytime, anywhere.</p>
+        <p class="subtitle">
+            Capture your thoughts anytime, anywhere.
+        </p>
 
         <form id="noteForm">
 
@@ -22,6 +25,7 @@
             ></textarea>
 
             <div class="btn-group">
+
                 <button type="submit" class="save-btn">
                     Save Note
                 </button>
@@ -29,14 +33,18 @@
                 <button type="reset" class="clear-btn">
                     Clear
                 </button>
+
             </div>
 
         </form>
 
-        <h2>Your Notes</h2>
+        <div class="notes-header">
+            <h2>Your Notes</h2>
+            <span id="noteCount">Total Notes: 0</span>
+        </div>
 
         <div id="notesContainer" class="notes-list">
-
+            <!-- Notes will appear here dynamically -->
         </div>
 
     </div>
@@ -45,3 +53,4 @@
 
 </body>
 </html>
+```

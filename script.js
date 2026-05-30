@@ -1,18 +1,18 @@
 const noteForm = document.getElementById("noteForm");
 const noteInput = document.getElementById("noteInput");
 const notesContainer = document.getElementById("notesContainer");
+const noteCount = document.getElementById("noteCount");
 
 let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
 displayNotes();
 
-noteForm.addEventListener("submit", function(e){
-
+noteForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const noteText = noteInput.value.trim();
 
-    if(noteText === ""){
+    if (noteText === "") {
         return;
     }
 
@@ -33,19 +33,24 @@ noteForm.addEventListener("submit", function(e){
     displayNotes();
 });
 
-function displayNotes(){
+function displayNotes() {
+
+    noteCount.textContent = `Total Notes: ${notes.length}`;
 
     notesContainer.innerHTML = "";
 
-    if(notes.length === 0){
+    if (notes.length === 0) {
 
-        notesContainer.innerHTML =
-        `<p>No notes available.</p>`;
+        notesContainer.innerHTML = `
+            <p class="empty-message">
+                📝 No notes yet! Start writing your first note.
+            </p>
+        `;
 
         return;
     }
 
-    notes.forEach((note,index)=>{
+    notes.forEach((note, index) => {
 
         const noteCard = document.createElement("div");
 
@@ -67,13 +72,12 @@ function displayNotes(){
         `;
 
         notesContainer.appendChild(noteCard);
-
     });
 }
 
-function deleteNote(index){
+function deleteNote(index) {
 
-    notes.splice(index,1);
+    notes.splice(index, 1);
 
     localStorage.setItem(
         "notes",
